@@ -4,9 +4,18 @@
 >
 > Find skills worth using.
 
-Shuku 是由 [ReductTech](https://github.com/ReductTech) 发起的、基于 GitHub 的 Skill 发现、测评与推荐社区。我们围绕真实用途整理安装指引、使用场景、验证记录与限制说明，帮助使用者做出更有依据的选择。
+Shuku 是一个由 [ReductTech](https://github.com/ReductTech) 发起的 GitHub 原生 Skill 社区。
 
-Shuku 不复制或接管被收录 Skill 的源代码。Skill 的代码、版本、Issue 和 Pull Request 继续由原始仓库维护；Shuku 维护独立的推荐内容，并将贡献者导向正确的上游项目。
+我们围绕真实的学习、科研、开发和工作场景，建设和维护可直接使用的 Skills。
+
+## Shuku 提供
+
+- 可直接安装和使用的 Skills
+- 按场景组织的 Skill 仓库
+- 社区共同维护的代码和知识
+- 实际安装与兼容性验证
+
+对于由 Shuku 社区维护的 Skill，代码、文档、Issue 和 Pull Request 在对应的 Shuku 仓库中共同维护。对于收录的外部 Skill，其源代码仍由原始仓库维护；Shuku 维护场景说明、安装指引、验证记录和必要的社区协作内容，并将源代码贡献导向正确的维护仓库。
 
 ## 按应用场景浏览
 
@@ -39,12 +48,12 @@ Shuku 不复制或接管被收录 Skill 的源代码。Skill 的代码、版本�
 
 你可以：
 
-- [推荐新的 Skill](https://github.com/reduct-shuku/.github/issues/new?template=submit-skill.yml)
-- [修正已有推荐](https://github.com/reduct-shuku/.github/issues/new?template=correct-listing.yml)
+- [提交或共同建设新的 Skill](https://github.com/reduct-shuku/.github/issues/new?template=submit-skill.yml)
+- [修正已有 Skill 信息](https://github.com/reduct-shuku/.github/issues/new?template=correct-listing.yml)
 - [提交实际使用与验证报告](https://github.com/reduct-shuku/.github/issues/new?template=verification-report.yml)
-- 按照 [贡献指南](https://github.com/reduct-shuku/.github/blob/main/CONTRIBUTING.md) 完善推荐条目
+- 按照 [贡献指南](https://github.com/reduct-shuku/.github/blob/main/CONTRIBUTING.md) 完善 Skill 代码、文档和知识内容
 
-如需修改 Skill 源代码、报告源项目缺陷或讨论其版本发布，请前往对应的原始仓库提交 Issue 或 Pull Request。
+如需修改 Skill 代码、报告缺陷或讨论版本发布，请先查看推荐页面标注的维护仓库：Shuku 社区维护的 Skill 在对应的 Shuku 仓库协作，外部 Skill 前往其原始仓库协作。
 
 ## 关联项目披露
 

@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        请提供可核对的事实与来源。若要修改 Skill 源代码，请前往原始仓库。
+        请提供可核对的事实与来源。若要修改 Skill 代码，请先确认推荐页面标注的维护仓库。
 
   - type: input
     id: listing-url

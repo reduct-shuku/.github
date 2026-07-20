@@ -1,13 +1,23 @@
-name: 推荐新的 Skill
-description: 推荐一个值得社区进一步了解、评审或验证的 Skill
-title: "[Skill 推荐] "
+name: 提交或推荐新的 Skill
+description: 提交希望由社区建设的 Skill，或推荐已有的外部 Skill
+title: "[Skill 提交] "
 labels:
   - submission
 body:
   - type: markdown
     attributes:
       value: |
-        感谢推荐。请基于可核对资料和真实体验填写；不确定的信息请明确标注。
+        感谢参与。请说明希望由 Shuku 社区共同建设，还是推荐已有的外部 Skill；不确定的信息请明确标注。
+
+  - type: dropdown
+    id: contribution-mode
+    attributes:
+      label: 提交类型
+      options:
+        - 参与建设由 Shuku 社区维护的 Skill
+        - 推荐外部仓库已有的 Skill
+    validations:
+      required: true
 
   - type: input
     id: skill-name
@@ -20,9 +30,9 @@ body:
   - type: input
     id: source-repository
     attributes:
-      label: 源仓库
-      description: 请填写 Skill 的原始 GitHub 仓库链接。
-      placeholder: https://github.com/owner/repository
+      label: 代码仓库或计划路径
+      description: 已有 Skill 请填写 GitHub 仓库链接；新 Skill 请填写计划存放的 Shuku 仓库或“待确认”。
+      placeholder: https://github.com/owner/repository，或“待确认”
     validations:
       required: true
 
@@ -47,7 +57,7 @@ body:
     id: experience
     attributes:
       label: 实际使用体验
-      description: 请描述使用版本、环境、完成的任务、结果和限制；如尚未实际使用，请明确说明。
+      description: 请描述使用版本、环境、完成的任务、结果和限制；新 Skill 可填写计划验证的实际任务和当前进展。
     validations:
       required: true
 
@@ -55,15 +65,15 @@ body:
     id: license
     attributes:
       label: 许可证
-      description: 填写源仓库声明的许可证名称或许可证文件链接；未声明时请填写“未声明”。
-      placeholder: 例如：MIT，或“未声明”
+      description: 填写仓库声明或计划采用的许可证；未声明或尚未确定时请如实说明。
+      placeholder: 例如：MIT、“未声明”或“待确认”
     validations:
       required: true
 
   - type: textarea
     id: relationship
     attributes:
-      label: 推荐人与项目的关系
+      label: 提交人与项目的关系
       description: 请披露维护、商业、雇佣、投资、孵化和赞助关系；如均无，请明确填写“无”。
     validations:
       required: true
@@ -73,5 +83,5 @@ body:
     attributes:
       label: 提交确认
       options:
-        - label: 我已核对源仓库可访问，并会遵守 Shuku 的贡献指南和评审政策。
+        - label: 我已说明代码仓库或计划路径，并会遵守 Shuku 的贡献指南和评审政策。
           required: true
