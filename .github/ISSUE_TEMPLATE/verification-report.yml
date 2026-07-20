@@ -1,0 +1,68 @@
+name: 提交实际使用与验证报告
+description: 记录特定版本和环境中的安装、任务、结果与限制
+title: "[验证报告] "
+labels:
+  - verification
+body:
+  - type: markdown
+    attributes:
+      value: |
+        验证报告只代表所记录的版本、环境和任务。请勿提交凭据、个人数据或其他敏感信息。
+
+  - type: input
+    id: source-repository
+    attributes:
+      label: 源仓库
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+
+  - type: input
+    id: tested-version
+    attributes:
+      label: 测试版本
+      description: 填写 release、tag 或 commit SHA。
+      placeholder: 例如：v1.2.0 或完整 commit SHA
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 测试环境
+      description: 包括操作系统、运行时、关键依赖、硬件或宿主工具版本。
+    validations:
+      required: true
+
+  - type: textarea
+    id: installation
+    attributes:
+      label: 安装步骤
+      description: 记录实际执行的步骤，并注明与上游文档的差异。请删除凭据和敏感信息。
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-task
+    attributes:
+      label: 实际任务
+      description: 说明输入、目标和判断任务是否完成的标准。
+    validations:
+      required: true
+
+  - type: textarea
+    id: result
+    attributes:
+      label: 测试结果
+      description: 记录成功、失败或部分成功的结果，以及必要的复现证据。
+    validations:
+      required: true
+
+  - type: textarea
+    id: known-limitations
+    attributes:
+      label: 已知限制
+      description: 记录失败条件、兼容性问题、风险和未覆盖范围；如暂未发现，请说明测试边界。
+    validations:
+      required: true

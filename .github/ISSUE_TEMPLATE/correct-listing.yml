@@ -1,0 +1,43 @@
+name: 修正已有推荐
+description: 报告 Shuku 推荐页面中的错误、过时信息或遗漏
+title: "[推荐修正] "
+labels:
+  - correction
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请提供可核对的事实与来源。若要修改 Skill 源代码，请前往原始仓库。
+
+  - type: input
+    id: listing-url
+    attributes:
+      label: Shuku 推荐页面
+      placeholder: https://github.com/reduct-shuku/...
+    validations:
+      required: true
+
+  - type: textarea
+    id: incorrect-information
+    attributes:
+      label: 错误信息
+      description: 请指出页面中错误、过时或容易误解的具体内容。
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-correction
+    attributes:
+      label: 建议修正内容
+      description: 请给出准确、简洁的替代表述或修改建议。
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence-links
+    attributes:
+      label: 证据链接
+      description: 每行一个链接，优先提供源仓库、发布记录、许可证文件或维护者说明。
+      placeholder: https://github.com/owner/repository/...
+    validations:
+      required: true

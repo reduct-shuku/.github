@@ -1,0 +1,77 @@
+name: 推荐新的 Skill
+description: 推荐一个值得社区进一步了解、评审或验证的 Skill
+title: "[Skill 推荐] "
+labels:
+  - submission
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢推荐。请基于可核对资料和真实体验填写；不确定的信息请明确标注。
+
+  - type: input
+    id: skill-name
+    attributes:
+      label: Skill 名称
+      placeholder: 例如：intuitive-deep-learning
+    validations:
+      required: true
+
+  - type: input
+    id: source-repository
+    attributes:
+      label: 源仓库
+      description: 请填写 Skill 的原始 GitHub 仓库链接。
+      placeholder: https://github.com/owner/repository
+    validations:
+      required: true
+
+  - type: input
+    id: primary-scenario
+    attributes:
+      label: 主要场景
+      description: 说明最适合使用该 Skill 的场景或任务类别。
+      placeholder: 例如：用交互式示例学习深度学习基础
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 用途说明
+      description: 说明它解决什么问题、适合哪些使用者，以及预期产出。
+    validations:
+      required: true
+
+  - type: textarea
+    id: experience
+    attributes:
+      label: 实际使用体验
+      description: 请描述使用版本、环境、完成的任务、结果和限制；如尚未实际使用，请明确说明。
+    validations:
+      required: true
+
+  - type: input
+    id: license
+    attributes:
+      label: 许可证
+      description: 填写源仓库声明的许可证名称或许可证文件链接；未声明时请填写“未声明”。
+      placeholder: 例如：MIT，或“未声明”
+    validations:
+      required: true
+
+  - type: textarea
+    id: relationship
+    attributes:
+      label: 推荐人与项目的关系
+      description: 请披露维护、商业、雇佣、投资、孵化和赞助关系；如均无，请明确填写“无”。
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我已核对源仓库可访问，并会遵守 Shuku 的贡献指南和评审政策。
+          required: true
