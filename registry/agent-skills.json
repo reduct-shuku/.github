@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "provider": "reduct-shuku",
+  "skills": [
+    {
+      "name": "intuitive-deep-learning",
+      "description": "在 Electron 内置浏览器中启动并使用本地深度学习互动课程。用于学习或讲解神经元、MLP、激活函数、损失函数、梯度下降、数字图像、卷积、CNN、LeNet 和人脸识别等主题，用于浏览课程图谱、选择学习路径和完成互动练习，也用于用户询问本技能是否有更新、要求检查更新或同步最新版时。",
+      "version": "1.0.0",
+      "source": {
+        "type": "github",
+        "repository": "https://github.com/reduct-shuku/intuitive-deep-learning",
+        "ref": "main",
+        "path": "."
+      },
+      "entrypoint": "SKILL.md",
+      "manifest": "shuku.json"
+    },
+    {
+      "name": "paper-reading-reproduction",
+      "description": "Read academic papers critically and reproduce or replicate their computational results through two contract-based workflows. Use when Codex needs to analyze a paper, explain its argument or methods, audit claim-to-evidence alignment, assess reproducibility, create a reproduction plan, set up and run author code, compare reproduced metrics with reported results, or produce an auditable reading or reproduction report from a PDF, DOI, URL, repository, dataset, manuscript, or experiment outputs.",
+      "version": "0.1.0",
+      "source": {
+        "type": "github",
+        "repository": "https://github.com/reduct-shuku/ai-research-skills",
+        "ref": "main",
+        "path": "skills/paper-reading-reproduction"
+      },
+      "entrypoint": "SKILL.md",
+      "manifest": "shuku.json"
+    },
+    {
+      "name": "pytorch-forward-debug",
+      "description": "为 PyTorch 训练 / 推理脚本搭建单卡 debug 前向 harness，覆盖 **数据加载与处理 / 模型前向 / loss 计算** 三大部分。**用户只需提供训练启动的 bash 脚本（或一行启动命令）即可**——skill 会先从 launcher 反溯出真正的 Python 入口、命令行参数、config 文件、以及训练循环真正会执行到的所有项目内源码文件，产出一份 inventory 交给用户确认，再基于它把每个关键中间张量的 shape / dtype / min / max / mean / std / has_nan 记录下来，**对图像 / feature map / latent 张量在进入与离开每个模块的前后做可视化对比**（sRGB 图像存 PNG，多通道 latent / feature map 存通道 grid），最终生成一份可以点开源码看的 markdown + 离线 HTML 双报告，按功能模块自动分组、支持每个记录独立折叠、Call Tree 以流程图形式展示。当用户提到 \"debug forward\"、\"trace training step\"、\"看每一层输入输出 shape / stats\"、\"可视化 latent\"、\"看每个模块前后图像的变化\"、\"给我一份 bash 脚本你帮我 debug 训练\"、\"从启动脚本自动追踪训练涉及哪些文件\"、\"复现训练前向\"、\"训练代码解析文档\"、\"注解版训练代码\"、\"训练前向报告\"、\"逐模块 hook\"、\"单卡跑一遍 forward\"、\"loss 计算怎么写的\"、\"loss 不下降想看每一层\"、\"数据加载出的东西对不对\"、或任何暗示\"我要拆开模型 forward 逐层看输出并出一份文档\"的需求时（即使没有明确说 \"debug\"）都应该积极触发本 skill —— 不要尝试临时手写一堆 print 语句或从头开始写 hook，直接用本 skill 提供的 SectionLogger + monkey-patch 模式 + 双报告渲染器，比即兴写 debug 代码质量高一个量级。",
+      "version": "0.3.0",
+      "source": {
+        "type": "github",
+        "repository": "https://github.com/reduct-shuku/ai-research-skills",
+        "ref": "main",
+        "path": "skills/pytorch-forward-debug"
+      },
+      "entrypoint": "SKILL.md",
+      "manifest": "shuku.json"
+    }
+  ]
+}

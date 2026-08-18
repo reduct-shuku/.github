@@ -10,6 +10,16 @@ Shuku 是一个由 [ReductTech](https://github.com/ReductTech) 发起的 GitHub 
 
 我们围绕真实的学习、科研、开发和工作场景，建设和维护可直接使用的 Skills。
 
+## Agent Skill Discovery
+
+支持网络访问的 Agent 可以从唯一的 canonical endpoint 获取当前 Skill 清单：
+
+```text
+https://reduct-shuku.github.io/.well-known/agent-skills.json
+```
+
+Registry 只提供 `name`、`description`、版本和来源定位信息。Agent 应先选择相关 Skill，再从对应仓库按需加载 `SKILL.md`，无需预先加载完整 Skill 内容。
+
 Shuku 提供：
 
 - 可直接安装和使用的 Skills
@@ -22,6 +32,7 @@ Shuku 提供：
 ## 仓库内容
 
 - [Organization 首页](profile/README.md)
+- [Agent Skills Registry](registry/README.md)
 - [贡献指南](CONTRIBUTING.md)
 - [评审政策](REVIEW_POLICY.md)
 - [行为准则](CODE_OF_CONDUCT.md)

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "repository": "reduct-shuku/ai-research-skills",
+      "mode": "skills-directory",
+      "path": "skills"
+    },
+    {
+      "repository": "reduct-shuku/intuitive-deep-learning",
+      "mode": "repository-skill",
+      "path": "."
+    }
+  ]
+}
