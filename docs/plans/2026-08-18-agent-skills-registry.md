@@ -4,7 +4,7 @@
 
 **Goal:** Publish a validated, machine-readable registry of all supported `reduct-shuku` skills at the canonical GitHub Pages endpoint.
 
-**Architecture:** The organization `.github` repository owns source configuration, metadata collection, validation, and the committed registry artifact. The `reduct-shuku.github.io` repository runs the same builder and deploys only the generated `.well-known/agent-skills.json` file through GitHub Pages.
+**Architecture:** The organization `.github` repository owns source configuration, metadata collection, validation, and the committed registry artifact. The `reduct-shuku.github.io` repository runs the same builder and deploys only the generated `/agent-skills.json` file through GitHub Pages.
 
 **Tech Stack:** Python 3.12, PyYAML, `unittest`, Git, GitHub Actions, GitHub Pages.
 
@@ -64,7 +64,7 @@
 
 **Files in `reduct-shuku.github.io`:**
 - Create: `.github/workflows/deploy-agent-skills.yml`
-- Create: `.well-known/agent-skills.json`
+- Create: `agent-skills.json`
 - Create: `README.md`
 
 1. Rebuild the registry from the public organization sources during deployment.

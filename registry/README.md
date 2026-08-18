@@ -3,7 +3,7 @@
 The public discovery endpoint is:
 
 ```text
-https://reduct-shuku.github.io/.well-known/agent-skills.json
+https://reduct-shuku.github.io/agent-skills.json
 ```
 
 `agent-skills.json` is generated. Do not edit it by hand. Skill names and descriptions come from each `SKILL.md` frontmatter; versions and source locations come from each `shuku.json`.
