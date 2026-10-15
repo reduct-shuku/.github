@@ -5,7 +5,7 @@
     {
       "name": "intuitive-deep-learning",
       "description": "在 Electron 内置浏览器中启动并使用本地深度学习互动课程。用于学习或讲解神经元、MLP、激活函数、损失函数、梯度下降、数字图像、卷积、CNN、LeNet 和人脸识别等主题，用于浏览课程图谱、选择学习路径和完成互动练习，也用于用户询问本技能是否有更新、要求检查更新或同步最新版时。",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "source": {
         "type": "github",
         "repository": "https://github.com/reduct-shuku/intuitive-deep-learning",
